@@ -42,7 +42,7 @@ char hostString[16] = {0};
 
 void setup() {
 
-  WiFiMulti.addAP("SSID", "PASSWORD");
+  WiFi.begin("SSID", "PASSWORD");
   
   pinMode(LED_BUILTIN, OUTPUT);
   
