@@ -88,7 +88,6 @@ void handleGesture() {
   if ( apds.isGestureAvailable() ) {
     switch ( apds.readGesture() ) {
       case DIR_LEFT:
-        Serial.println("LEFT");
         sendRequest();
         break;
       default:
