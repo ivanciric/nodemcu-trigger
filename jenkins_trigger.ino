@@ -125,7 +125,7 @@ void findMDNS() {
 }
 
 void sendRequest() {
-  if ((WiFiMulti.run() == WL_CONNECTED)) {
+  if (WiFi.status() == WL_CONNECTED) {
     Serial.println("Sending request...");
     HTTPClient http;
     http.begin("http://" + JENKINS_USER + ":" + JENKINS_PASSWORD + "@" + JENKINS_HOST + ":" + JENKINS_PORT + "/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)");
